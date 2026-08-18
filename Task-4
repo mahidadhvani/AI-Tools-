@@ -1,0 +1,35 @@
+Food delivery scooter
+-----------------------
+Create a modern 3D app icon of a food delivery scooter carrying a small insulated food delivery box. Friendly, clean, minimal design, rounded shapes, vibrant red and orange colors, subtle shadows, centered object, isolated on a simple background, polished mobile-app icon aesthetic, square composition, no text.
+
+Cricket bat
+---------------------
+Create a modern 3D app icon featuring a cricket bat and cricket ball. Dynamic but clean composition, vibrant green and blue colors, rounded shapes, soft studio lighting, subtle shadow, centered object, polished mobile-app icon aesthetic, square composition, no text.
+
+
+
+2. Zomato-style food app background
+--------------------------------------
+Create a wide hero background image for a modern food delivery app homepage. Bright, energetic mood with warm red, orange, and golden tones. Modern urban cafe vibe with beautifully presented food, subtle restaurant interiors, soft natural lighting, inviting atmosphere, shallow depth of field, premium commercial photography, clean negative space in the center-left for website text and buttons, wide 16:9 composition, no logos, no text.
+
+
+3. Optimize the generated image for React
+-------------------------------------------
+npm install sharp
+const sharp = require("sharp");
+
+async function optimizeImage() {
+  await sharp("food-app-background.png")
+    .resize({
+      width: 1600,
+      withoutEnlargement: true
+    })
+    .webp({
+      quality: 75
+    })
+    .toFile("food-app-background.webp");
+
+  console.log("Image converted to WebP successfully.");
+}
+
+optimizeImage();
