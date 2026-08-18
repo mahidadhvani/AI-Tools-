@@ -1,0 +1,136 @@
+1. Figma AI prompt — Music Playlist Manager
+------------------------------------------
+
+Create a modern responsive wireframe for a "Music Playlist Manager" app homepage.
+
+Include:
+- A top navigation bar with the app logo, Home, My Playlists, Browse, and Profile.
+- A prominent search bar for finding songs, artists, and playlists.
+- A "Recently Played" section with horizontal music cards.
+- A "My Playlists" section showing playlist cards with cover images, playlist names, creator names, and song counts.
+- A "Recommended Playlists" section.
+- A sidebar or filter area for Genres such as Pop, Rock, Hip-Hop, Jazz, and Classical.
+- A footer containing About, Help, Privacy, and Terms links.
+
+Use a clean modern music-streaming layout with clear hierarchy, card-based sections, consistent spacing, and a desktop-first wireframe style. Keep the design suitable for later conversion into a responsive web application.
+
+
+
+4. BookMyShow-style movie card — HTML + CSS only
+------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Card</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .movie-card {
+      width: 280px;
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .movie-poster {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .movie-content {
+      padding: 18px;
+    }
+
+    .movie-title {
+      margin: 0 0 10px;
+      font-size: 21px;
+      color: #222;
+    }
+
+    .movie-rating {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 6px 10px;
+      border-radius: 5px;
+      background: #f2f2f2;
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .book-button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background: #e51b23;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .book-button:hover {
+      background: #c9141b;
+    }
+
+    @media (max-width: 400px) {
+      .movie-card {
+        width: 90%;
+      }
+
+      .movie-poster {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="movie-card">
+
+    <img
+      class="movie-poster"
+      src="movie-poster.jpg"
+      alt="Movie poster"
+    >
+
+    <div class="movie-content">
+
+      <h2 class="movie-title">
+        Avengers: Endgame
+      </h2>
+
+      <div class="movie-rating">
+        ⭐ 4.5/5
+      </div>
+
+      <button class="book-button">
+        Book Now
+      </button>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
