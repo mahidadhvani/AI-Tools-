@@ -1,0 +1,60 @@
+1. SEO meta tags — electronics store
+--------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Buy Electronics Online in India | Best Deals & Offers</title>
+
+  <meta
+    name="description"
+    content="Shop the latest electronics online at great prices. Explore smartphones, laptops, earbuds, smartwatches and more with exciting deals and fast delivery."
+  >
+
+  <meta
+    name="keywords"
+    content="buy electronics online, electronics store India, smartphones online, laptops online, wireless earbuds, smartwatches"
+  >
+</head>
+
+<body>
+
+  <h1>Online Electronics Store</h1>
+
+  <p>
+    Shop smartphones, laptops, headphones, smartwatches and other
+    electronics at competitive prices.
+  </p>
+
+</body>
+</html>
+
+
+2. ProductDescription.js
+-----------------------------------------
+function ProductDescription() {
+  return (
+    <div>
+      <p>
+        Enjoy immersive sound wherever you go with these stylish wireless
+        earbuds, designed for music, calls, and everyday entertainment.
+        Featuring clear audio, deep bass, and a comfortable in-ear fit,
+        they are ideal for long listening sessions. The compact charging
+        case makes it easy to recharge your earbuds while travelling,
+        working, or exercising. Bluetooth connectivity provides a quick
+        and reliable connection with compatible smartphones, tablets,
+        and laptops. With a lightweight design and convenient touch
+        controls, these earbuds combine portability, comfort, and
+        everyday performance. They are a practical choice for users
+        looking for affordable wireless audio with modern features and
+        dependable battery performance.
+      </p>
+    </div>
+  );
+}
+
+export default ProductDescription;
