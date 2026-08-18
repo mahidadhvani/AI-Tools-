@@ -1,0 +1,325 @@
+1. product-listing-outline.html
+-----------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart-Style Product Listing</title>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Flipkart</div>
+
+    <!-- SEARCH BAR -->
+    <div class="search-bar">
+      <input
+        type="search"
+        placeholder="Search for products, brands and more"
+      >
+      <button>Search</button>
+    </div>
+
+    <nav>
+      <a href="#">Login</a>
+      <a href="#">Cart</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+      <h2>Categories</h2>
+      <!-- Add category links here -->
+    </section>
+
+    <!-- PRODUCT LISTING -->
+    <section class="product-listing">
+
+      <!-- FILTERS -->
+      <aside class="filters">
+        <h2>Filters</h2>
+
+        <label>
+          Price
+          <input type="range" min="0" max="100000">
+        </label>
+
+        <h3>Brand</h3>
+        <label><input type="checkbox"> Samsung</label>
+        <label><input type="checkbox"> Apple</label>
+        <label><input type="checkbox"> OnePlus</label>
+
+        <h3>Rating</h3>
+        <label><input type="checkbox"> 4★ & above</label>
+      </aside>
+
+      <!-- PRODUCTS -->
+      <section class="products">
+
+        <div class="listing-header">
+          <h1>Products</h1>
+
+          <select>
+            <option>Sort by: Relevance</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Customer Rating</option>
+          </select>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="product-grid">
+
+          <article class="product-card">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product Name 1</h3>
+            <p>★★★★☆ 4.2</p>
+            <p><strong>₹999</strong></p>
+            <p>Free delivery</p>
+          </article>
+
+          <article class="product-card">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Product Name 2</h3>
+            <p>★★★★★ 4.5</p>
+            <p><strong>₹1,499</strong></p>
+            <p>Free delivery</p>
+          </article>
+
+          <article class="product-card">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Product Name 3</h3>
+            <p>★★★★☆ 4.1</p>
+            <p><strong>₹2,299</strong></p>
+            <p>Free delivery</p>
+          </article>
+
+          <article class="product-card">
+            <img src="product4.jpg" alt="Product 4">
+            <h3>Product Name 4</h3>
+            <p>★★★★★ 4.7</p>
+            <p><strong>₹3,999</strong></p>
+            <p>Free delivery</p>
+          </article>
+
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <h3>About</h3>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
+    </div>
+
+    <div>
+      <h3>Help</h3>
+      <a href="#">Payments</a>
+      <a href="#">Shipping</a>
+      <a href="#">Returns</a>
+    </div>
+
+    <div>
+      <h3>Consumer Policy</h3>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+    </div>
+
+    <p>&copy; 2026 Product Store</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+2. myntra-navbar.html
+------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Myntra-Style Navbar</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 5%;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* LOGO */
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* DESKTOP NAVIGATION */
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+
+    /* HAMBURGER BUTTON */
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* MOBILE LAYOUT */
+    @media (max-width: 768px) {
+
+      .navbar {
+        flex-wrap: wrap;
+        padding: 12px 5%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        border-top: 1px solid #ddd;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 15px 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--
+  PROMPT GIVEN TO CHATGPT:
+
+  "Generate a responsive navigation bar for a Myntra-style fashion
+  shopping app. Include Home, Explore, Cart, and Profile links.
+
+  Desktop requirements:
+  - Display the logo and all four navigation links horizontally.
+  - Use comfortable spacing between links.
+  - Keep the navigation bar clean and aligned.
+
+  Mobile requirements:
+  - Display a hamburger menu.
+  - Hide the navigation links initially.
+  - When the hamburger menu is clicked, display Home, Explore,
+    Cart, and Profile vertically.
+  - Make the layout responsive.
+
+  Use semantic HTML, accessible labels, responsive CSS, and
+  minimal JavaScript. Return a complete HTML snippet."
+  -->
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" aria-label="Main navigation">
+
+    <div class="logo">
+      MYNTRA
+    </div>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button
+      class="menu-toggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="nav-links">
+      ☰
+    </button>
+
+    <!-- NAVIGATION LINKS -->
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <a href="#">Home</a>
+      </li>
+
+      <li>
+        <a href="#">Explore</a>
+      </li>
+
+      <li>
+        <a href="#">Cart</a>
+      </li>
+
+      <li>
+        <a href="#">Profile</a>
+      </li>
+    </ul>
+
+  </nav>
+
+  <!-- JAVASCRIPT FOR MOBILE MENU -->
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+
+    menuButton.addEventListener("click", function () {
+
+      const isOpen = navLinks.classList.toggle("active");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
+    });
+  </script>
+
+</body>
+</html>
