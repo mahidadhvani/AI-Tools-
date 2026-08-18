@@ -1,0 +1,52 @@
+1. PlaylistCard.jsx — React functional component
+-------------------------------------------------------------------------------------------------
+import React from "react";
+
+function PlaylistCard({ name, creator, songCount }) {
+  return (
+    <div className="playlist-card">
+      <h2>{name}</h2>
+      <p>Created by: {creator}</p>
+      <p>{songCount} songs</p>
+    </div>
+  );
+}
+
+export default PlaylistCard;
+
+
+
+
+
+<PlaylistCard
+  name="Chill Vibes"
+  creator="Arjun"
+  songCount={25}
+/>
+
+
+
+
+
+
+
+2. Flipkart-style product card
+----------------------------------------------------------------------------------
+function ProductCard({ image, title, price }) {
+  return (
+    <div className="product-card">
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <p>₹{price}</p>
+    </div>
+  );
+}
+
+export default ProductCard;
+
+
+<ProductCard
+  image="https://example.com/phone.jpg"
+  title="Smartphone"
+  price={14999}
+/>
